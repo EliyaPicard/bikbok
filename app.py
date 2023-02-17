@@ -188,5 +188,4 @@ def result():
     return send_file(output)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
