@@ -1,7 +1,8 @@
-pip install pandas
 from flask import Flask, request, render_template,send_file
+# pip install pandas
 import pandas as pd
 import numpy as np
+from openpyxl import load_workbook
 import xlsxwriter
 from datetime import datetime
 import io
@@ -11,9 +12,9 @@ import io
 app = Flask(__name__)
 
 
-# @app.route('/')
-# def home():
-#     return render_template('home.html')
+@app.route('/')
+def home():
+    return render_template('home.html')
 
 
 @app.route('/result', methods=['POST'])
@@ -187,4 +188,5 @@ def result():
     return send_file(output)
 
 
-
+if __name__ == '__main__':
+    app.run(debug=True)
