@@ -1,8 +1,6 @@
 from flask import Flask, request, render_template,send_file
-# pip install pandas
 import pandas as pd
 import numpy as np
-from openpyxl import load_workbook
 import xlsxwriter
 from datetime import datetime
 import io
